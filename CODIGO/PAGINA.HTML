@@ -10,38 +10,75 @@
 </head>
 
 <body>
-    <!-- LOGO Y MENU -->
-    <header class="header">
+    <div class="folio">
+        <!-- LOGO Y MENU -->
+        <header class="header">
 
-    <!-- LOGO -->
-        <div class="header__logo"></div>
-            <a href="#inicio">
-                <img src="/IMAGENES/logomoto.png" alt="logo de la tienda">
+            <!-- LOGO -->
+            <div class="header__logo"></div>
+                <a href="#inicio">
+                    <img src="/IMAGENES/logomoto.png" alt="logo de la tienda">
+                </a>
+                <h1>MOTONEW</h1>
 
+            <!-- MENU -->
+            <input type="checkbox" id="menu-toggle" class="header_menu_toggle"/>
+            <label for="menu-toggle" class="header_menu_toggle"></label>
+                <span></span>
+                <span></span>
+                <span></span>  
+                <span></span>
+            <nav>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#inicio">Inicio</a>
+                    </li>    
+                    <li class="nav__item">
+                        <a href="#motos">Motos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#tiendas">Tiendas</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contactanos">Contactanos</a>
+                    </li>
+                </ul>
 
-            </a>
-        <h1>MOTONEW</h1>
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#motos">Motos</a>
-            <a href="#tiendas">Tiendas</a>
-            <a href="#contactanos">Contactanos</a>
-        </nav>
-    </header>
-
+            </nav>
+        </header>
     
-    <main class="contenedor__principal">
+        <main class="contenedor__principal">
+        <!-- CREACION DE HERO -->
+            <section id="inicio" class="hero">
+                <div class="Hero__imagen">
+                    <img src="/IMAGENES/hero.png" alt="imagen de hero">
+                </div>
+            </section>
+        <!-- MISION Y VISION -->
+            <section class="mv_container">
+                <div class="mv_mision">
+                    <h2 class="mv_title">Nuestra Mision</h2>
+                    <p class="mv_text">Ser reconocidos como líderes en el mercado peruano de motocicletas y vehículos todoterreno, distinguiéndonos por nuestra
+                    innovación, calidad y compromiso con la excelencia. Aspiramos a expandir nuestra presencia a nivel nacional,
+                    estableciendo una red de concesionarios y servicios técnicos que ofrezcan un soporte integral y confiable. Queremos ser
+                    la marca preferida por los aventureros y entusiastas, brindando no solo vehículos excepcionales, sino también un
+                    respaldo postventa incomparable que garantice seguridad y tranquilidad en cada recorrido.</p>
+                </div>
+            <section class="mv_container">
+                <div class="mv_vision">
+                    <h2 class="mv_title">Nuestra Vision</h2>
+                    <p class="mv_text">Ofrecer vehículos de alto rendimiento y calidad superior que inspiren confianza y pasión en cada uno de nuestros
+                    clientes. Nos comprometemos a proporcionar una experiencia de conducción inigualable, apoyada por un sólido respaldo
+                    postventa en todas nuestras unidades. Nos dedicamos a compartir experiencias emocionantes y asegurar la satisfacción
+                    total de nuestros usuarios a través de un servicio excepcional y atención personalizada.</p>
+                </div>
+            </section>class
 
-    <!-- CREACION DE HERO -->
-        <section id="inicio" class="seccion-hero">
-            <div class="imagen-principal">
-                <img src="/IMAGENES/hero.png" alt="imagen de hero">
-            </div>
-        </section>
+            
 
 
-    </main>
-
+        </main>
+    </div>
 </body>
 
 </html>
