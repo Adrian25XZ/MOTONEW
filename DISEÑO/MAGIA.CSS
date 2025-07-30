@@ -1,0 +1,51 @@
+/* VARIABLES CSS EN ROOT */
+:root {
+    --color-principal: #111111;
+    /* Texto principal (casi negro) */
+    --color-secundario: #ffffff;
+    /* Fondo claro o texto en zonas oscuras */
+    --color-acento: #f5c300;
+    /* Acento amarillo vibrante */
+    --color-gris: #999999;
+    /* Texto o detalles secundarios */
+    --color-rojo: #e10600;
+    /* Tono rojo para destacar */
+    --color-fondo-oscuro: #1b1b1b;
+    /* Fondo oscuro profundo */
+}
+/* TIPOGRAFIA */
+
+:root {
+    --fuente-titulo: 'Bebas Neue', 'Oswald', sans-serif;
+    --fuente-texto: 'Montserrat', 'Open Sans', sans-serif;
+
+/* Tamaño base por defecto (dispositivos medianos) */
+    --font-xxl: 4rem;
+    --font-xl: 2.5rem;
+    --font-lg: 1.5rem;
+    --font-md: 1.125rem;
+    --font-sm: 0.95rem;
+    --font-xs: 0.8rem;
+/* 📱 Dispositivos pequeños (teléfonos) */
+    --font-xxl: 2.5rem;
+    --font-xl: 1.8rem;
+    --font-lg: 1.3rem;
+    --font-md: 1rem;
+    --font-sm: 0.875rem;
+    --font-xs: 0.75rem;
+/* 💻 Dispositivos grandes (pantallas ≥ 1200px) */
+    --font-xxl: 5rem;
+    --font-xl: 3rem;
+    --font-lg: 2rem;
+    --font-md: 1.25rem;
+    --font-sm: 1rem;
+    --font-xs: 0.9rem;
+/* Espaciados (márgenes, paddings, gaps) */
+    --space-xxs: 0.25rem;   /* 4px */
+    --space-xs: 0.5rem;     /* 8px */
+    --space-sm: 0.75rem;    /* 12px */
+    --space-md: 1rem;       /* 16px */
+    --space-lg: 1.5rem;     /* 24px */
+    --space-xl: 2rem;       /* 32px */
+    --space-xxl: 3rem;      /* 48px */
+}
