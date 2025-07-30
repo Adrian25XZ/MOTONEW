@@ -105,8 +105,10 @@ html{
 }
 
 body{
-    font-family:var(--fuente-titulo)
-    color var(--color-secundario)
-    
-
+    font-family:var(--fuente-titulo);
+    line-height: 1.6;
+    color: var(--color-gris);
+    background-color: var(--color-secundario);
+    overflow-x: hidden ;
 }
+
