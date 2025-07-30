@@ -107,8 +107,21 @@ html{
 body{
     font-family:var(--fuente-titulo);
     line-height: 1.6;
-    color: var(--color-gris);
+    color: var(--color-fondo-oscuro);
     background-color: var(--color-secundario);
     overflow-x: hidden ;
 }
 
+/* LAYOUT PRINCIPAL CON CSS GRID EN MOVIL */
+
+
+.general{
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: 120px 1fr auto;
+
+}
