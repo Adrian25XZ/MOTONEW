@@ -12,44 +12,52 @@
     /* Tono rojo para destacar */
     --color-fondo-oscuro: #1b1b1b;
     /* Fondo oscuro profundo */
-}
-/* TIPOGRAFIA */
 
-:root {
+    /* TIPOGRAFIA */
+
+
     --fuente-titulo: 'Bebas Neue', 'Oswald', sans-serif;
     --fuente-texto: 'Montserrat', 'Open Sans', sans-serif;
 
-/* Tamaño base por defecto (dispositivos medianos) */
+    /* Tamaño base por defecto (dispositivos medianos) */
     --font-xxl: 4rem;
     --font-xl: 2.5rem;
     --font-lg: 1.5rem;
     --font-md: 1.125rem;
     --font-sm: 0.95rem;
     --font-xs: 0.8rem;
-/* 📱 Dispositivos pequeños (teléfonos) */
+    /* 📱 Dispositivos pequeños (teléfonos) */
     --font-xxl: 2.5rem;
     --font-xl: 1.8rem;
     --font-lg: 1.3rem;
     --font-md: 1rem;
     --font-sm: 0.875rem;
     --font-xs: 0.75rem;
-/* 💻 Dispositivos grandes (pantallas ≥ 1200px) */
+    /* 💻 Dispositivos grandes (pantallas ≥ 1200px) */
     --font-xxl: 5rem;
     --font-xl: 3rem;
     --font-lg: 2rem;
     --font-md: 1.25rem;
     --font-sm: 1rem;
     --font-xs: 0.9rem;
-/* Espaciados (márgenes, paddings, gaps) */
-    --space-xxs: 0.25rem;   /* 4px */
-    --space-xs: 0.5rem;     /* 8px */
-    --space-sm: 0.75rem;    /* 12px */
-    --space-md: 1rem;       /* 16px */
-    --space-lg: 1.5rem;     /* 24px */
-    --space-xl: 2rem;       /* 32px */
-    --space-xxl: 3rem;      /* 48px */
-}
-:root {
+    /* Espaciados (márgenes, paddings, gaps) */
+    --space-xxs: 0.25rem;
+    /* 4px */
+    --space-xs: 0.5rem;
+    /* 8px */
+    --space-sm: 0.75rem;
+    /* 12px */
+    --space-md: 1rem;
+    /* 16px */
+    --space-lg: 1.5rem;
+    /* 24px */
+    --space-xl: 2rem;
+    /* 32px */
+    --space-xxl: 3rem;
+    /* 48px */
+
+
+
     /* Sombras suaves y modernas */
     --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.08);
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.12);
@@ -60,16 +68,12 @@
 
     /* Sombra para texto */
     --text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
 
-:root {
     /* Transiciones */
     --transition-fast: all 0.2s ease-in-out;
     --transition-medium: all 0.4s ease-in-out;
     --transition-slow: all 0.6s ease-in-out;
-}
 
-:root {
     /* Bordes redondeados */
     --radius-xs: 2px;
     --radius-sm: 4px;
@@ -78,50 +82,239 @@
     --radius-xl: 32px;
     --radius-full: 9999px;
     /* Círculos o pills */
+
+    /* Breakpoints */
+    --breakpoint-xs: 480px;
+    /* Teléfonos pequeños */
+    --breakpoint-sm: 600px;
+    /* Teléfonos normales */
+    --breakpoint-md: 768px;
+    /* Tablets verticales */
+    --breakpoint-lg: 1024px;
+    /* Tablets horizontales / laptops */
+    --breakpoint-xl: 1280px;
+    /* Escritorios normales */
+    --breakpoint-xxl: 1536px;
+    /* Pantallas grandes */
 }
-
-:root {
-  /* Breakpoints */
-  --breakpoint-xs: 480px;   /* Teléfonos pequeños */
-  --breakpoint-sm: 600px;   /* Teléfonos normales */
-  --breakpoint-md: 768px;   /* Tablets verticales */
-  --breakpoint-lg: 1024px;  /* Tablets horizontales / laptops */
-  --breakpoint-xl: 1280px;  /* Escritorios normales */
-  --breakpoint-xxl: 1536px; /* Pantallas grandes */
-}
-
-
 /* RESET Y ESTILOS BASE */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
     font-size: 16px;
 }
 
-body{
-    font-family:var(--fuente-titulo);
+body {
+    font-family: var(--fuente-titulo);
     line-height: 1.6;
     color: var(--color-fondo-oscuro);
     background-color: var(--color-secundario);
-    overflow-x: hidden ;
+    overflow-x: hidden;
+
 }
 
 /* LAYOUT PRINCIPAL CON CSS GRID EN MOVIL */
 
 
-.general{
-    display: grid;
+.pagina {
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: 120px 1fr auto;
     grid-template-areas:
         "header"
         "main"
         "footer";
-    grid-template-rows: 120px 1fr auto;
+    grid-area: 15px;
+/* Header con logo y navegacion */
 
+    .header {
+        grid-area: header;
+        background: linear-gradient(135deg, var(--color-principal), var(--color-fondo-oscuro) 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px;
+        position: relative;
+        z-index: 1000;
+            .header__contenedor{
+                max-width: 1280px;
+                margin: 0 auto;
+                padding: 0 var(--space-md);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 7rem;
+
+
+                        .header__logo {
+                                font-size: 10.5px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                gap: 1.5px;
+                        
+                                .marco__logo {
+                                    width: 35px;
+                        
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        
+                            .header__menu-toggle {
+                                display: none;
+                        
+                                &:checked+.header__menu-button span:nth-child(1) {
+                                    transform: rotate(45deg) translate(6px, 6px);
+                                }
+                        
+                                &:checked+.header__menu-button span:nth-child(2) {
+                                    opacity: 0;
+                                }
+                        
+                                &:checked+.header__menu-button span:nth-child(3) {
+                                    transform: rotate(-45deg) translate(6px, -6px);
+                                }
+                        
+                                &:checked~.nav {
+                                    transform: translateY(0);
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        
+                            /* BOTON MOVIL */
+                            .header__menu-button {
+                                background-color: var(--color-secundario);
+                                display: block;
+                                width: 2rem;
+                                height: 2rem;
+                                position: relative;
+                                cursor: pointer;
+                                background: none;
+                                border: none;
+                        
+                        
+                                span {
+                                    display: block;
+                                    width: 100%;
+                                    height: 2px;
+                                    background-color: var(--color-secundario);
+                                    position: absolute;
+                                    left: 0;
+                                    transition: var(--transition-medium);
+                                    transform-origin: center;
+                        
+                                    &:nth-child(1) {
+                                        top: 6px;
+                                    }
+                        
+                                    &:nth-child(2) {
+                                        top: 14px;
+                                    }
+                        
+                                    &:nth-child(3) {
+                                        top: 22px;
+                                    }
+                                }
+                            }
+                        
+                            /* menu navegacion */
+                            .nav {
+                                background-color: var(--color-fondo-oscuro);
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                width: 100%;
+                                box-shadow: var(--shadow-lg);
+                                transform: translateY(-100%);
+                        
+                                transition: var(--transition-medium);
+                        
+                                .nav__list {
+                                    list-style: none;
+                                    padding: var(--space-md) 0;
+                        
+                                    .nav__item {
+                        
+                                        .nav__link {
+                                            display: block;
+                                            padding: var(--space-md) var(--space-lg);
+                                            color: var(--color-secundario);
+                                            text-decoration: none;
+                                            font-weight: 500;
+                                            transition: var(--transition-fast);
+                        
+                                            &.hover,
+                                            .nav__link--active {
+                                                background-color: var(--color-principal);
+                                                color: var(--color-principal);
+                                                transform: translateX(8px);
+                                            }
+                        
+                                        }
+                                    }
+                                }
+                        
+                        
+                            }
+            }
+
+
+    }
+    /* aca va a ir el cuerpo principal de mi pagina web */
+    .main{
+        .hero{
+            .hero__imagen{
+                width: 100vw;
+                height: auto;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                };
+            }
+        }
+    }
 }
+/* ACA VA IR LOS QUERIS PARA HACER RESPONSIVE MI PAG WEB */
+/* @media (min-width: 768px){ 
+    .pagina{
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .header__menu-button{
+                display: none;
+            }
+            .nav{
+                width: 70%;
+                height: 350px;
+                color: red;
+                position: static;
+                background-color: red;
+                opacity: 1;
+                visibility: visible;
+                .nav__list{
+                    display: flex;
+                    
+                    .nav__item{
+                        .nav__link{
+                            border-radius: 20px;
+
+                        }
+                    }
+                }
+                }
+            }
+        }
+
+    } */

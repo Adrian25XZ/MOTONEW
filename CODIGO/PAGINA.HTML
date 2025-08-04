@@ -9,43 +9,41 @@
 </head>
 
 <body>
-    <div class="general">
+    <div class="pagina">
         <!-- LOGO Y MENU -->
         <header class="header">
-
-            <!-- LOGO -->
-            <div class="header__logo">
-                <a href="#inicio">
-                    <img src="/IMAGENES/logomoto.png" alt="logo de la tienda">
-                </a>
-                <h1>MOTONEW</h1>
+            <div class="header__contenedor">
+                <!-- LOGO -->
+                <div class="header__logo">
+                    <div class="marco__logo">
+                        <img src="/IMAGENES/logomoto.png" alt="logo de la tienda">
+                    </div>
+                    <h1>MOTONEW</h1>
+                </div>
+                <!-- MENU -->
+                <input type="checkbox" class="header__menu-toggle" id="menu-toggle"/>
+                <label for="menu-toggle" class="header__menu-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- NAVEGACION -->
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#inicio" class="nav__link nav__link--active">Inicio</a>
+                        </li>
+                        <li class="nav__item"><a href="#motos" class="nav__link" >Motos</a>
+                        </li>
+                        <li class="nav__item"><a href="#tiendas" class="nav__link">Tiendas</a>
+                        </li>
+                        <li class="nav__item" ><a href="#contactanos" class="nav__link">Contactanos</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <!-- MENU -->
-            <input type="checkbox" id="menu-toggle" class="header_menu_toggle"/>
-            <label for="menu-toggle" class="header__menu-toggle"></label>
-                <span></span>
-                <span></span>
-                <span></span>  
-                <span></span>
-            <nav>
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#inicio">Inicio</a>
-                    </li>    
-                    <li class="nav__item">
-                        <a href="#motos">Motos</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#tiendas">Tiendas</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contactanos">Contactanos</a>
-                    </li>
-                </ul>
-            </nav>
         </header>
-    
-        <section class="contenedor__principal">
+
+        <main class="main">
             <!-- CREACION DE HERO -->
             <section id="inicio" class="hero">
                 <div class="hero__imagen">
@@ -62,8 +60,6 @@
                     la marca preferida por los aventureros y entusiastas, brindando no solo vehículos excepcionales, sino también un
                     respaldo postventa incomparable que garantice seguridad y tranquilidad en cada recorrido.</p>
                 </div>
-            </section>
-            <section class="mv_container">
                 <div class="mv_vision">
                     <h2 class="mv_title">Nuestra Visión</h2>
                         <p class="mv_text">Ofrecer vehículos de alto rendimiento y calidad superior que inspiren confianza y pasión en cada uno de nuestros
@@ -91,10 +87,12 @@
                         añadió.</p>
                 </div>
                 <div class="racing_img">
-                        <img src="/IMAGENES/ganadores-expomoto-2024.jpg" alt="imagen de expomoto">
+                       <!--  <img src="/IMAGENES/ganadores-expomoto-2024.jpg" alt="imagen de expomoto"> -->
                 </div>
             </section>
-        </section>
+        </main>
+        <footer class="footer">
+        </footer>
     </div>
 </body>
 
