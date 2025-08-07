@@ -16,7 +16,7 @@
     /* TIPOGRAFIA */
 
     --fuente-titulo: 'Bebas Neue', 'Oswald', sans-serif;
-    --fuente-texto: 'Montserrat', 'Open Sans', sans-serif;
+    --fuente-texto: 'Raleway''Montserrat', 'Open Sans', sans-serif;
 
     /* Tamaño base por defecto (dispositivos medianos) */
     --font-xxl: 4rem;
@@ -298,11 +298,12 @@ body {
                         } 
                                                         
                         .mv_text {
-                            font-size: var(--color-principal);
+                            font-size: var(--font-sm);
                             line-height: 1.8;
                             margin-bottom: var(--space-md);
                             text-align: justify;
                             break-inside: avoid;
+                            font-family: 'Raleway', sans-serif;
                             }
             }
 
@@ -315,11 +316,12 @@ body {
                         }
 
                         .mv_text {
-                            font-size: var(--color-principal);
+                            font-size: var(--font-sm);
                             line-height: 1.8;
                             margin-bottom: var(--space-md);
                             text-align: justify;
                             break-inside: avoid;
+                            font-family: 'Raleway', sans-serif;
                             }
             }
         }
