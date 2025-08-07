@@ -264,7 +264,7 @@ body {
     CONTENIDO PRINCIPAL
     ========================================-->*/
     .main {
-        /* grid-area: main; */
+        grid-area: main;
 
         /* ========================================
            SECCIÓN HERO (BEM)

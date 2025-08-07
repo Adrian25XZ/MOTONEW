@@ -152,21 +152,25 @@ body {
             height: 7rem;
 
             .header__logo {
-                font-size: 10.5px;
-                font-weight: bold;
+                width: 250px;
                 display: flex;
                 align-items: center;
-                gap: 1.5px;
+                gap: 5px;
+                font-size: var(--font-xs);
+                font-weight: bold;
 
                 .marco__logo {
                     width: 35px;
 
                     img {
                         width: 100%;
+                        height: auto;
+                        display: block;
+                        border-radius: var(--radius-md);
                     }
                 }
-                .h1 {
-                    background-color: #ffffff;
+                h1 {
+                    color: #ffffff;
                 }
             }
 
@@ -288,34 +292,75 @@ body {
 @media (min-width: 768px) {
     .pagina {
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            .header__contenedor {
+                .header__menu-button {
+                    display: none;
+                    }
 
-             .header__menu-button {
-                display: none;
-            }
+                .nav {
+                    position: static;
+                    transform: none;
+                    opacity: 1;
+                    visibility: visible;
+                    box-shadow: none;
+                    background: transparent;
+                    
+                    .nav__list {
+                        display: flex;
+                        padding: 0;
+                        gap: var(--space-lg);
 
-            .nav {
-                width: 70%;
-                height: 350px;
-                color: red;
-                position: static;
-                background-color: red;
-                opacity: 1;
-                visibility: visible;
+                        .nav__item {
+                            border: none;
 
-                .nav__list {
-                    display: flex;
+                            .nav__link {
+                                padding: var(--space-sm) var(--space-md);
+                                border-radius: var(var(--radius-md));
 
-                    .nav__item {
-                        .nav__link {
-                            border-radius: 20px;
-
+                            }
                         }
                     }
-                }
-            } 
+                } 
+            }
         }
     }
+}
+
+@media (min-width: 1024px) {
+    .pagina {
+        grid-template-areas:
+            "header header"
+            "main main"
+            "footer footer";
+
+        .header {
+            display: flex;
+            align-items: center;
+            width: 100vw;
+
+            .header__contenedor{
+                width: 100%;
+                
+                .header__logo{
+                    width: 350px;
+                    gap: 20px;
+                    display: flex;
+                    
+                    img {
+                        width: 100%;
+                        transition: transform var(--breakpoint-xs);
+                    }
+                }
+            }
+
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+    }
+
 }
