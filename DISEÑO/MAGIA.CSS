@@ -6,7 +6,7 @@
     /* Fondo claro o texto en zonas oscuras */
     --color-acento: #f5c300;
     /* Acento amarillo vibrante */
-    --color-gris: #999999;
+    --color-gris: #eeeeee;
     /* Texto o detalles secundarios */
     --color-rojo: #e10600;
     /* Tono rojo para destacar */
@@ -274,6 +274,8 @@ body {
 
     /* aca va a ir el cuerpo principal de mi pagina web */
     .main {
+        grid-area: main;
+
         .hero {
             .hero__imagen {
                 width: 100vw;
@@ -285,55 +287,120 @@ body {
                 }
             }
         }
-        .mv_container{
-            column-count: 2;
-            column-gap: 70px;
-            margin: 70px;
-                .mv_mision{
-                    .mv_title{
-                        font-size: var(--font-lg);
-                        color: var(--color-principal);
-                        margin-bottom: var(--space-lg);
-                        text-align: center;
-                        } 
-                                                        
-                        .mv_text {
-                            font-size: var(--font-sm);
-                            line-height: 1.8;
-                            margin-bottom: var(--space-md);
-                            text-align: justify;
-                            break-inside: avoid;
-                            font-family: 'Raleway', sans-serif;
-                            }
-            }
 
-                .mv_vision{
-                    .mv_title{
-                        font-size: var(--font-lg);
-                        color: var(--color-principal);
-                        margin-bottom: var(--space-lg);
-                        text-align: center;
+        .temas {
+            padding: var(--space-xl) var(--space-md);
+            background-color: var(--color-secundario);
+
+            .mv_container{
+                max-width: 1280px;
+                margin: 0 auto;
+                display: grid;
+                gap: var(--space-sm);
+
+                .mv_header{
+                    display: grid ;
+                    grid-template-columns: 1fr;
+                    gap: var(--space-md);
+                    align-items: center;
+/*                     column-count: 2;
+                    column-gap: 70px;
+                    margin: 40px; */
+
+                    .mv_mision{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                            .mv_title{
+                                font-size: var(--font-lg);
+                                color: var(--color-principal);
+                                margin-bottom: var(--space-lg);
+                                position: relative;
+                                display: inline-block;
+                                }
+
+                            .mv_text {
+                                    font-size: var(--font-sm);
+                                    line-height: 1.8;
+                                    margin-bottom: var(--space-md);
+                                    text-align: justify;
+                                    break-inside: avoid;
+                                    font-family: 'Raleway', sans-serif;
+                            }
+                    }
+
+                    .mv_vision{
+                            .mv_title{
+                                font-size: var(--font-lg);
+                                color: var(--color-principal);
+                                margin-bottom: var(--space-lg);
+                                text-align: center;
+                                }
+
+                                .mv_text {
+                                    font-size: var(--font-sm);
+                                    line-height: 1.8;
+                                    margin-bottom: var(--space-md);
+                                    text-align: justify;
+                                    break-inside: avoid;
+                                    font-family: 'Raleway', sans-serif;
+                                }
+                    }
+                }
+            
+                .racing_header {
+                    column-count: 2;
+                    width: 100%;
+                    padding: var(--space-xxl)var(--space-md);
+                    background-color: var(--color-gris);
+
+                    .racing_noticias {
+                        .racing_title {
+                            font-size: var(--font-md);
+                            color: var(--color-principal);
+                            margin-bottom: var(--space-lg);
+                            position: relative;
+                            display: inline-block;
                         }
-
-                        .mv_text {
-                            font-size: var(--font-sm);
-                            line-height: 1.8;
-                            margin-bottom: var(--space-md);
-                            text-align: justify;
-                            break-inside: avoid;
-                            font-family: 'Raleway', sans-serif;
-                            }
-            }
-        }
-        
-        .racing_img{
-            width: 100vw;
-            height: auto;
-
-            img{
-                width: 100%;
-                height: 100%;
-
+                        
+                        .racing_date {
+                        font-size: var(--font-md);
+                        margin-bottom: var(--space-md);
+                        }
+                                                                                              .racing_text {
+                        font-size: var(--font-sm);
+                        color: var(--color-principal);
+                        line-height: 1.5;
+                        margin-bottom: var(--space-md);
+                        text-align: justify;
+                        font-family: 'Raleway', sans-serif;
+                        }
+                    }
+                                                                    
+                    .racing_img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 50%;
+                        overflow: visible;
+                        margin: 0 auto;
+                        transition: var(--transition-medium);
+                
+                        img {  
+                            /* display: flex; */
+                            width: 100%;
+                            height: auto;
+                            object-fit: cover;
+                            object-position: center 2%;
+                
+                        }
+                        
+                        &:hover {
+                            transform: scale(1.04);
+                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                        }
+                    }
+                }
             }
         }
     }
@@ -417,5 +484,5 @@ body {
         }
 
     }
-
+    
 }
