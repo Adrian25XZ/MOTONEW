@@ -331,6 +331,11 @@ body {
                     }
 
                     .mv_vision{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+
                         .mv_title{
                             font-size: var(--font-lg);
                             color: var(--color-principal);
