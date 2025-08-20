@@ -232,7 +232,7 @@ body {
             }
 
             /* menu navegacion */
-             .nav {
+            .nav {
                 background-color: var(--color-fondo-oscuro);
                 position: absolute;
                 top: 100%;
@@ -267,7 +267,7 @@ body {
                             }
                         }
                     }
-                } 
+                }
             } 
         } 
     }
@@ -300,24 +300,20 @@ body {
 
                 .mv_header{
                     display: grid ;
-                    grid-template-columns: 1fr;
+                    grid-template-columns: 1fr 1fr;
                     gap: var(--space-md);
                     align-items: center;
-                    /*column-count: 2;
+                    column-count: 3;
                     column-gap: 70px;
-                    margin: 40px; */
+                    margin: 40px;
 
                     .mv_mision{
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-
-                            .mv_title{
-                                font-size: var(--font-lg);
-                                color: var(--color-principal);
-                                margin-bottom: var(--space-lg);
-                                position: relative;
-                                display: inline-block;
+                        
+                        .mv_title{
+                            font-size: var(--font-lg);
+                            color: var(--color-principal);
+                            margin-bottom: var(--space-lg);
+                            text-align: center;
                             }
 
                             .mv_text {
@@ -331,10 +327,6 @@ body {
                     }
 
                     .mv_vision{
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-
 
                         .mv_title{
                             font-size: var(--font-lg);
@@ -359,35 +351,32 @@ body {
                     grid-template-columns: 1fr;
                     gap: var(--space-md);
                     align-items: center;
-                    /*column-count: 2;
-                    column-gap: 70px;
-                    margin: 40px; */
 
-                        .vl_title{
-                            font-size: var(--font-lg);
-                            color: var(--color-principal);
-                            margin-bottom: var(--space-lg);
-                            text-align: center;
-                        }
-                        .vl_valores{
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 8px;
+                    .vl_title{
+                        font-size: var(--font-lg);
+                        color: var(--color-principal);
+                        margin-bottom: var(--space-lg);
+                        text-align: center;
+                    }
+                    .vl_valores{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        justify-content: center;
                             
-                            span{
-                                background-color: var(--color-principal);
-                                color: white;
-                                padding: 6px 12px;
-                                border-radius: 12px;
-                                font-size: 14px;
-                                font-weight: bold;
-                                display: inline-block;
+                        span{
+                            background-color: var(--color-principal);
+                            color: white;
+                            padding: 6px 12px;
+                            border-radius: 12px;
+                            font-size: 14px;
+                            font-weight: bold;
+                            display: inline-block;
 
-                            }
                         }
+                    }
                 }
-            }
-
+            
                 .slider-header{
                     column-count: 2;
                     width: 100%;
@@ -454,7 +443,7 @@ body {
                             font-size: var(--font-md);
                             margin-bottom: var(--space-md);
                         }
-                                                                                .racing_text {
+                                                                                           .racing_text {
                             font-size: var(--font-sm);
                             color: var(--color-principal);
                             line-height: 1.5;
@@ -487,9 +476,74 @@ body {
                         }
                     }
                 }
+                .acces_header{
+                    margin-top: var(--space-xl);
+
+                    .acces_title{
+                        font-size: var(--font-lg);
+                        font-weight: 600;
+                        color: var(--color-principal);
+                        margin-bottom: var(--space-lg);
+                        display: flex;
+                        align-items: center;
+                        gap: var(--space-sm);
+                    }
+                    .acces_text{
+                        font-size: var(--font-sm);
+                        color: var(--color-principal);
+                        line-height: 1.5;
+                        margin-bottom: var(--space-md);
+                        text-align: justify;
+                        font-family: 'Raleway', sans-serif;
+                    }
+                    .acces-grid{
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: var(--space-xl);
+
+                        .acces-card{
+                            background: var(--color-secundario);
+                            padding: var(--space-lg);
+                            border-radius: var(--radius-xl);
+                            text-align: center;
+                            box-shadow: var(--shadow-ms);
+                            transition: var(--transition-medium);
+                            cursor: pointer;
+                            border: 2px solid transparent;
+                            
+                            &:hover{
+                                transform: translateY(-5px);
+                            }
+
+                            .acces-card__imagen{
+                                font-size: 2rem;
+                                margin-bottom: var(--space-sm);
+                                display: block;
+
+                                .img{
+                                    max-width: 100%;
+                                    height: auto;
+                                    object-fit: cover;
+                                    border-radius: 8px;
+                                }
+                            }
+                            .acces-card__title{
+                                font-size: 18px;
+                                margin: 10px 0 5px;
+                                color: #222;
+                            }
+                            .acces-card__text{
+                                font-size: 14px;
+                                color: #555;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
+
+
 
     /* footer */
     .footer{
@@ -604,7 +658,7 @@ body {
             .header__contenedor {
                 .header__menu-button {
                     display: none;
-                    }
+                }
 
                 .nav {
                     position: static;
