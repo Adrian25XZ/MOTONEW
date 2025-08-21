@@ -666,7 +666,6 @@ body {
         .main{
             .temas{
                 .mv_container{
-
                     .racing_header{
                         display: grid;
                         grid-template-columns: 1fr;
@@ -719,7 +718,6 @@ body {
         .main{
             .temas{
                 .mv_container{
-
                     .racing_header{
                         grid-template-columns: 1fr 1fr;
 
