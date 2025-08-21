@@ -698,28 +698,27 @@ body {
                 } 
             }
         }
-        
-        .main{
+
+/*         .main{
             .temas{
                 .mv_container{
 
                     .racing_header{
-                        grid-template-columns: 1fr;
-                        text-align: center;
+                        grid-template-columns: 1fr 1fr;
 
                         .racing_noticias{
-                            align-items: center;
-                            text-align: center;
+                            align-items: flex-start;
+                            text-align: left;
                         }
                         .racing_img{
-                            margin-top: var(--space-lg);
-                            max-width: 80%;
+                            max-width: 100%;
+                            margin: 0 auto;
                             justify-self: center;
                         }
                     }
                 }
             }
-        }
+        } */
     }
 }
 
