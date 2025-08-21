@@ -127,7 +127,7 @@ body {
             align-items: center;
             height: 7rem;
 
-            /* Mheader del logo */
+            /* header del logo */
             .header__logo {
                 width: 250px;
                 display: flex;

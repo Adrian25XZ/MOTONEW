@@ -660,8 +660,25 @@ body {
 }
 
 /* ACA VA IR LOS QUERIS PARA HACER RESPONSIVE MI PAG WEB */
-@media (min-width 640px){
+@media (min-width: 640px){
+
+    .pagina{
+        .main{
+            .temas{
+                .mv_container{
+
+                    .racing_header{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: var(--space-md);
+                    }
+                }
+            }
+        }
+
     }
+
+}
 
 
 @media (min-width: 768px) {
@@ -699,7 +716,7 @@ body {
             }
         }
 
-/*         .main{
+        .main{
             .temas{
                 .mv_container{
 
@@ -718,7 +735,7 @@ body {
                     }
                 }
             }
-        } */
+        }
     }
 }
 
