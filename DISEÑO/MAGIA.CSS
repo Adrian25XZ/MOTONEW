@@ -278,7 +278,7 @@ body {
 
         .hero {
             .hero__imagen {
-                width: 100vw;
+                width: 100%;
                 height: auto;
 
                 img {
@@ -426,7 +426,7 @@ body {
             
                 .racing_header {
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: 1fr;
                     gap: var(--space-xxl);
                     align-items: center;
                     width: 100%;
@@ -510,7 +510,7 @@ body {
 
                     .acces-grid{
                         display: grid;
-                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-columns: 1fr;
                         gap: var(--space-xl);
 
                         .acces-card{
@@ -662,20 +662,6 @@ body {
 /* ACA VA IR LOS QUERIS PARA HACER RESPONSIVE MI PAG WEB */
 @media (min-width: 640px){
 
-    .pagina{
-        .main{
-            .temas{
-                .mv_container{
-                    .racing_header{
-                        display: grid;
-                        grid-template-columns: 1fr;
-                        gap: var(--space-md);
-                    }
-                }
-            }
-        }
-
-    }
 
 }
 
@@ -729,6 +715,11 @@ body {
                             max-width: 100%;
                             margin: 0 auto;
                             justify-self: center;
+                        }
+                    }
+                    .acces_header{
+                        .acces-grid{
+                            grid-template-columns: repeat(3, 1fr);
                         }
                     }
                 }
